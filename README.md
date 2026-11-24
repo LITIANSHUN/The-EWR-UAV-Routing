@@ -14,8 +14,6 @@ EWR models the delivery environment as a time-dependent directed energy graph. E
 - Time-dependent directed energy graph
 - Delayed and uncertain wind estimate
 - Parallel and crosswind decomposition
-  
-  
 
 ## Installation
 
@@ -78,35 +76,6 @@ The paper uses:
 **ASOS preprocessing: Coming soon.**
 
 ## 
-
-## API Example
-
-```python
-from ewr import EWRPlanner, PlannerConfig, UAVParameters
-from ewr.simulation import build_grid_graph, synthetic_wind_snapshot
-from ewr.energy import DemoPowerModel
-
-graph = build_grid_graph(size=6, spacing_m=150.0)
-wind = synthetic_wind_snapshot(graph, time_s=80.0, seed=7)
-
-planner = EWRPlanner(
-    graph=graph,
-    wind=wind,
-    uav=UAVParameters(),
-    config=PlannerConfig(),
-    power_model=DemoPowerModel(),
-)
-
-result = planner.plan(
-    start="n0_0",
-    goal="n5_5",
-    depot="n0_0",
-    remaining_energy_wh=100.0,
-    payload_kg=0.5,
-)
-
-print(result)
-```
 
 ## 
 
