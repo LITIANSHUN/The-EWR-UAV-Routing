@@ -1,0 +1,25 @@
+{
+  "uav": {
+    "airspeed_mps": 12.0,
+    "cruise_power_w": 180.0,
+    "battery_capacity_wh": 100.0,
+    "emergency_reserve_wh": 10.0,
+    "crosswind_margin": 0.75,
+    "max_payload_kg": 0.5
+  },
+  "planner": {
+    "risk_lambda": 2.0,
+    "beta_w": 1.0,
+    "beta_tau": 0.05,
+    "beta_g": 0.5,
+    "alpha_w": 1.0,
+    "alpha_b": 1.0,
+    "alpha_p": 1.0
+  },
+  "demo_power_model": {
+    "headwind_gain_w_per_mps": 8.0,
+    "tailwind_credit_w_per_mps": 3.0,
+    "crosswind_gain_w_per_mps2": 1.2,
+    "payload_gain_w_per_kg": 30.0
+  }
+}
